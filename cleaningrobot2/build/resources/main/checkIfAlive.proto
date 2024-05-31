@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_package = "unimi.redmerska.anna";
+
+service AliveService {
+  rpc alive(AliveRequest) returns (AliveResponse) {}
+}
+
+message AliveRequest {
+  string message = 1;
+}
+
+message AliveResponse {
+  string message = 1;
+}

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_package = "unimi.redmerska.anna";
+
+service ExitService {
+  rpc exit(ExitRequest) returns (ExitResponse) {}
+}
+
+message ExitRequest {
+  int32 id = 1;
+}
+
+message ExitResponse {
+  string message = 1;
+}

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_package = "unimi.redmerska.anna";
+
+message RequestMechanic {
+  int32 id = 1;
+  string timestamp = 2;
+}
+
+message ResponseMechanic {
+  string ok = 1;
+}
+
+service MechanicService{
+  rpc handleRequestMechanic (RequestMechanic) returns (ResponseMechanic) {}
+}

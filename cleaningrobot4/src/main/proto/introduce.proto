@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_package = "unimi.redmerska.anna";
+
+service IntroduceService {
+  rpc introduce(IntroduceRequest) returns (IntroduceResponse) {}
+}
+
+message IntroduceRequest {
+  int32 x = 1;
+  int32 y = 2;
+  int32 district = 3;
+  int32 id = 4;
+  int32 port = 5;
+}
+
+message IntroduceResponse {
+  int32 x = 1;
+  int32 y = 2;
+  int32 district = 3;
+}
